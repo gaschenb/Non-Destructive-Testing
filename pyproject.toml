@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ndttoolbox"
+version = "1.0.0"
+description = "Physics-based non-destructive testing toolbox: ultrasonics, phased arrays, eddy current, radiography and CT, thermography, guided waves and probability of detection, with an interactive PyQt5 application."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22", "scipy>=1.8", "matplotlib>=3.5", "PyQt5>=5.15", "pyqtgraph>=0.13"]
+
+[project.urls]
+Repository = "https://github.com/gaschenb/Non-Destructive-Testing"
+
+[project.scripts]
+ndttoolbox = "ndttoolbox.cli:main"
+
+[project.gui-scripts]
+ndttoolbox-gui = "ndttoolbox.gui.app:main"
+
+[tool.setuptools.packages.find]
+include = ["ndttoolbox*"]
